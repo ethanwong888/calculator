@@ -1,5 +1,6 @@
 body {
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -23,18 +24,25 @@ body {
   font-size: 24px;
 }
 
-.buttons {
-  display: grid;
+.buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
 
 button {
+  width: 20%;
   padding: 10px;
   font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 5px;
   cursor: pointer;
+}
+
+#clear-delete {
+  width: 45%;
 }
 
 button:hover {
