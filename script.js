@@ -1,21 +1,30 @@
 let displayValue = "";
 
+function updateDisplay() {
+	document.getElementById("display").value = displayValue;
+}
+
 function appendToDisplay(value) {
-    displayValue += value;
-    document.getElementById("display").value = displayValue;
+	displayValue += value;
+	updateDisplay();
 }
 
 function clearDisplay() {
-    displayValue = "";
-    document.getElementById("display").value = "";
+	displayValue = "";
+	updateDisplay();
+}
+
+function deleteCharacter() {
+	displayValue = displayValue.slice(0, -1);
+	updateDisplay();
 }
 
 function calculateResult() {
-    try {
-        displayValue = eval(displayValue);
-        document.getElementById("display").value = displayValue;
-    } catch (error) {
-        displayValue = "Error";
-        document.getElementById("display").value = displayValue;
-    }
+	try {
+			displayValue = eval(displayValue);
+			updateDisplay();
+	} catch (error) {
+			displayValue = "Error";
+			updateDisplay();
+	}
 }
