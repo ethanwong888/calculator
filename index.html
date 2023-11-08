@@ -14,27 +14,34 @@
       <button id="clear-delete" onclick="clearDisplay()">CLEAR</button>
       <button id="clear-delete" onclick="deleteCharacter()">DELETE</button>
 
-      <button onclick="appendToDisplay('7')">7</button>
-      <button onclick="appendToDisplay('8')">8</button>
-      <button onclick="appendToDisplay('9')">9</button>
-      <button onclick="setOperation('÷')">÷</button>
+      <button id="digit" onclick="appendToDisplay('7')">7</button>
+      <button id="digit" onclick="appendToDisplay('8')">8</button>
+      <button id="digit" onclick="appendToDisplay('9')">9</button>
+      <button id="operation" onclick="setOperation('÷')">÷</button>
       
-      <button onclick="appendToDisplay('4')">4</button>
-      <button onclick="appendToDisplay('5')">5</button>
-      <button onclick="appendToDisplay('6')">6</button>
-      <button onclick="setOperation('×')">×</button>
+      <button id="digit" onclick="appendToDisplay('4')">4</button>
+      <button id="digit" onclick="appendToDisplay('5')">5</button>
+      <button id="digit" onclick="appendToDisplay('6')">6</button>
+      <button id="operation" onclick="setOperation('×')">×</button>
       
-      <button onclick="appendToDisplay('1')">1</button>
-      <button onclick="appendToDisplay('2')">2</button>
-      <button onclick="appendToDisplay('3')">3</button>
-      <button onclick="setOperation('-')">-</button>
+      <button id="digit" onclick="appendToDisplay('1')">1</button>
+      <button id="digit" onclick="appendToDisplay('2')">2</button>
+      <button id="digit" onclick="appendToDisplay('3')">3</button>
+      <button id="operation" onclick="setOperation('-')">-</button>
       
-      <button onclick="appendToDisplay('.')">.</button>
-      <button onclick="appendToDisplay('0')">0</button>
-      <button onclick="evaluateExpression()">=</button>
-      <button onclick="setOperation('+')">+</button>
+      <button id="digit" onclick="appendToDisplay('.')">.</button>
+      <button id="digit" onclick="appendToDisplay('0')">0</button>
+      <button id="operation" onclick="evaluateExpression()">=</button>
+      <button id="operation" onclick="setOperation('+')">+</button>
     </div>
   </div>
+
+  <div id="desmos-calculator" style="width: 600px; height: 400px;"></div>
   <script src="script.js"></script>
+  <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+  <script>
+    var elt = document.getElementById('desmos-calculator');
+    var calculator = Desmos.GraphingCalculator(elt);
+  </script>
 </body>
 </html>
