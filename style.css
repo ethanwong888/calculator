@@ -54,3 +54,15 @@ button {
 #operation {
   background-color: #FCA311;
 }
+
+footer {
+  width: 100%;
+  font-family: 'Roboto Mono', monospace;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 40px;
+}
